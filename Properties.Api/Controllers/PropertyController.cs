@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging.Abstractions;
 using Properties.Client.Api.Models;
@@ -8,6 +9,7 @@ using Properties.Services.DTO;
 
 namespace Properties.Client.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PropertyController : ControllerBase
